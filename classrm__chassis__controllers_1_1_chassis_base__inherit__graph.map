@@ -1,0 +1,8 @@
+<map id="rm_chassis_controllers::ChassisBase" name="rm_chassis_controllers::ChassisBase">
+<area shape="rect" id="node1" title=" " alt="" coords="328,104,484,145"/>
+<area shape="rect" id="node3" href="$classrm__chassis__controllers_1_1_balance_controller.html" title=" " alt="" coords="532,5,688,47"/>
+<area shape="rect" id="node4" href="$classrm__chassis__controllers_1_1_mecanum_controller.html" title=" " alt="" coords="532,71,688,112"/>
+<area shape="rect" id="node5" href="$classrm__chassis__controllers_1_1_sentry_controller.html" title=" " alt="" coords="532,136,688,177"/>
+<area shape="rect" id="node6" href="$classrm__chassis__controllers_1_1_swerve_controller.html" title=" " alt="" coords="532,201,688,243"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,89,280,160"/>
+</map>
