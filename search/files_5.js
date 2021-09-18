@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['sentry_2ecpp_160',['sentry.cpp',['../sentry_8cpp.html',1,'']]],
-  ['sentry_2eh_161',['sentry.h',['../sentry_8h.html',1,'']]],
-  ['standard_2ecpp_162',['standard.cpp',['../rm__gimbal__controllers_2src_2standard_8cpp.html',1,'(Global Namespace)'],['../rm__shooter__controllers_2src_2standard_8cpp.html',1,'(Global Namespace)']]],
-  ['standard_2eh_163',['standard.h',['../rm__gimbal__controllers_2include_2rm__gimbal__controllers_2standard_8h.html',1,'(Global Namespace)'],['../rm__shooter__controllers_2include_2rm__shooter__controllers_2standard_8h.html',1,'(Global Namespace)']]],
-  ['swerve_2ecpp_164',['swerve.cpp',['../swerve_8cpp.html',1,'']]],
-  ['swerve_2eh_165',['swerve.h',['../swerve_8h.html',1,'']]]
+  ['readme_2emd_164',['README.md',['../_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../rm__calibration__controllers_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../rm__chassis__controllers_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../rm__gimbal__controllers_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../rm__orientation__controller_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)'],['../rm__shooter__controllers_2_r_e_a_d_m_e_8md.html',1,'(Global Namespace)']]],
+  ['robot_5fstate_5fcontroller_2ecpp_165',['robot_state_controller.cpp',['../robot__state__controller_8cpp.html',1,'']]],
+  ['robot_5fstate_5fcontroller_2eh_166',['robot_state_controller.h',['../robot__state__controller_8h.html',1,'']]]
 ];

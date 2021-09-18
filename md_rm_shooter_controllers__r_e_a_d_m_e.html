@@ -65,34 +65,34 @@ $(function() {
 <div class="title">rm_shooter_controller </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md59"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md81"></a>
 Overview</h1>
 <p>The rm_shooter_controller has four states: STOP, READY, PUSH, and BLOCK, it controls the left and right friction wheels and the trigger wheel through PID algorithm according to the command. It can set the bullet speed by setting the angular velocity of the friction wheel, and at the same time realizes the block detection.</p>
 <p><b>Keywords:</b> ROS, robomaster, shooter</p>
-<h3><a class="anchor" id="autotoc_md60"></a>
+<h3><a class="anchor" id="autotoc_md82"></a>
 License</h3>
 <p>The source code is released under a <a href="https://github.com/rm-controls/rm_controllers/blob/master/LICENSE">BSD 3-Clause license</a>.</p>
 <p><b>Author: DynamicX<br  />
  Affiliation: DynamicX<br  />
  Maintainer: DynamicX</b></p>
 <p>The rm_shooter_controller package has been tested under <a href="http://www.ros.org">ROS</a> Melodic and Noetic on respectively 18.04 and 20.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.</p>
-<h2><a class="anchor" id="autotoc_md61"></a>
+<h2><a class="anchor" id="autotoc_md83"></a>
 Hardware interface type</h2>
 <ul>
 <li><code>JointStateInterface</code> Used to obtain the speed of friction wheel and trigger wheel and the position of trigger wheel.</li>
 <li><code>EffortJointInterface</code> Used to send torque commands for friction wheels and trigger wheel.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md62"></a>
+<h1><a class="anchor" id="autotoc_md84"></a>
 Installation</h1>
-<h2><a class="anchor" id="autotoc_md63"></a>
+<h2><a class="anchor" id="autotoc_md85"></a>
 Installation from Packages</h2>
 <p>To install all packages from this repository as Debian packages use</p>
 <div class="fragment"><div class="line">sudo apt-get install ros-noetic-rm-shooter-controllers</div>
 </div><!-- fragment --><p>or better use <code>rosdep</code>:</p>
 <div class="fragment"><div class="line">sudo rosdep install --from-paths src</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md64"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md86"></a>
 Building from Source</h2>
-<h3><a class="anchor" id="autotoc_md65"></a>
+<h3><a class="anchor" id="autotoc_md87"></a>
 Dependencies</h3>
 <ul>
 <li>rm_description</li>
@@ -109,37 +109,37 @@ Dependencies</h3>
 <li>effort_controllers</li>
 <li>dynamic_reconfigure</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md66"></a>
+<h3><a class="anchor" id="autotoc_md88"></a>
 Building</h3>
 <p>To build this package with catkin build. Clone the latest version from this repository into your catkin workspace.</p>
 <div class="fragment"><div class="line">catkin_workspace/src</div>
 <div class="line">git clone https://github.com/rm-controls/rm_controllers.git</div>
 <div class="line">rosdep install --from-paths . --ignore-src</div>
 <div class="line">catkin build</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md67"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md89"></a>
 Usage</h1>
 <p>Run the controller with mon launch:</p>
 <div class="fragment"><div class="line">mon launch rm_shooter_controllers load_controllers.launch</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md68"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md90"></a>
 Cfg</h1>
 <ul>
 <li><b>shooter.cfg:</b> Add parameters related to friction wheel's angular velocity corresponding to each bullet speed and trigger block detection parameters.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md69"></a>
+<h1><a class="anchor" id="autotoc_md91"></a>
 Launch files</h1>
 <ul>
 <li><b>load_controller.launch:</b> Load the parameters in config files and load the shooter controller.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md70"></a>
+<h1><a class="anchor" id="autotoc_md92"></a>
 ROS API</h1>
-<h3><a class="anchor" id="autotoc_md71"></a>
+<h3><a class="anchor" id="autotoc_md93"></a>
 Subscribed Topics</h3>
 <ul>
 <li><p class="startli">**<code>command</code>** (rm_msgs/ShootCmd)</p>
 <p class="startli">Commands of controller state, bullet speed, frequency of shooting.</p>
 </li>
 </ul>
-<h3><a class="anchor" id="autotoc_md72"></a>
+<h3><a class="anchor" id="autotoc_md94"></a>
 Parameters</h3>
 <ul>
 <li><p class="startli">**<code>block_effort</code>, <code>block_speed</code>, <code>block_duration</code>** (double)</p>
@@ -158,9 +158,9 @@ Parameters</h3>
 <p class="startli">These parameters mean the friction wheel's angular velocity, the number of it's name expresses different bullet speeds (in m/s).</p>
 </li>
 </ul>
-<h2><a class="anchor" id="autotoc_md73"></a>
+<h2><a class="anchor" id="autotoc_md95"></a>
 Controller configuration examples</h2>
-<h3><a class="anchor" id="autotoc_md74"></a>
+<h3><a class="anchor" id="autotoc_md96"></a>
 Complete description</h3>
 <div class="fragment"><div class="line">shooter_controller:</div>
 <div class="line">    type: rm_shooter_controllers/Controller</div>
@@ -184,7 +184,7 @@ Complete description</h3>
 <div class="line">    qd_15: 460.0</div>
 <div class="line">    qd_18: 515.0</div>
 <div class="line">    qd_30: 740.0</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md75"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md97"></a>
 Bugs &amp; Feature Requests</h1>
 <p>Please report bugs and request features using the <a href="https://github.com/gdut-dynamic-x/simple_chassis_controller/issues">Issue Tracker</a> . </p>
 </div></div><!-- contents -->
