@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>rm_controllers: rm_orientation_controller/include/rm_orientation_controllers/orientation_controller.h Source File</title>
+<title>rm_controllers: rm_orientation_controller/include/rm_orientation_controller/orientation_controller.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -61,7 +61,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d7b98c1191025d4d06f663a1c2152892.html">rm_orientation_controller</a></li><li class="navelem"><a class="el" href="dir_da1dd3cd634640eb66f9ae39dad27cc9.html">include</a></li><li class="navelem"><a class="el" href="dir_b7515100ebf76079289fcaac00caa8bd.html">rm_orientation_controllers</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_d7b98c1191025d4d06f663a1c2152892.html">rm_orientation_controller</a></li><li class="navelem"><a class="el" href="dir_da1dd3cd634640eb66f9ae39dad27cc9.html">include</a></li><li class="navelem"><a class="el" href="dir_1637b364ee82a8b56c25290bdf4fca46.html">rm_orientation_controller</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -84,17 +84,17 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;rm_common/hardware_interface/robot_state_interface.h&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Imu.h&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacerm__orientation__controller.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerm__orientation__controller.html">rm_orientation_controller</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classrm__orientation__controller_1_1_controller.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrm__orientation__controller_1_1_controller.html">Controller</a> :</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span> controller_interface::MultiInterfaceController&lt;hardware_interface::ImuSensorInterface,</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                          rm_control::RobotStateInterface&gt; {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">   21</a></span>&#160;  <a class="code" href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">Controller</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classrm__orientation__controller_1_1_controller.html#a68dc5e6e5923e172df8bf6454c401211">init</a>(hardware_interface::RobotHW *robot_hw,</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">update</a>(<span class="keyword">const</span> ros::Time &amp;time, <span class="keyword">const</span> ros::Duration &amp;period) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="namespacerm__orientation__controller.html">   16</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerm__orientation__controller.html">rm_orientation_controller</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classrm__orientation__controller_1_1_controller.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrm__orientation__controller_1_1_controller.html">Controller</a> : <span class="keyword">public</span> controller_interface::MultiInterfaceController&lt;hardware_interface::ImuSensorInterface,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                                                                         rm_control::RobotStateInterface&gt;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">   22</a></span>&#160;  <a class="code" href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">Controller</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classrm__orientation__controller_1_1_controller.html#a68dc5e6e5923e172df8bf6454c401211">init</a>(hardware_interface::RobotHW* robot_hw, ros::NodeHandle&amp; root_nh, ros::NodeHandle&amp; controller_nh) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">update</a>(<span class="keyword">const</span> ros::Time&amp; time, <span class="keyword">const</span> ros::Duration&amp; period) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keywordtype">double</span> publish_rate_{};</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  hardware_interface::ImuSensorHandle imu_sensor_;</div>
@@ -111,14 +111,14 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  std::shared_ptr&lt;realtime_tools::RealtimePublisher&lt;sensor_msgs::Imu&gt; &gt; imu_pub_;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};  <span class="comment">// namespace rm_orientation_controller</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//SRC_RM_SOFTWARE_RM_CONTROLLERS_RM_ORIENTATION_CONTROLLERS_INCLUDE_ORIENTATION_CONTROLLER_H_</span></div>
-<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html">rm_orientation_controller::Controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:19</div></div>
-<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_a68dc5e6e5923e172df8bf6454c401211"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#a68dc5e6e5923e172df8bf6454c401211">rm_orientation_controller::Controller::init</a></div><div class="ttdeci">bool init(hardware_interface::RobotHW *robot_hw, ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:11</div></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SRC_RM_SOFTWARE_RM_CONTROLLERS_RM_ORIENTATION_CONTROLLERS_INCLUDE_ORIENTATION_CONTROLLER_H_</span></div>
+<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html">rm_orientation_controller::Controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:20</div></div>
+<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_a68dc5e6e5923e172df8bf6454c401211"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#a68dc5e6e5923e172df8bf6454c401211">rm_orientation_controller::Controller::init</a></div><div class="ttdeci">bool init(hardware_interface::RobotHW *robot_hw, ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:12</div></div>
 <div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_a791855bc01d8a21570923def3c67c1b7"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">rm_orientation_controller::Controller::Controller</a></div><div class="ttdeci">Controller()=default</div></div>
-<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_ad07d28f7a13dec1bae5079731d7da6a8"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">rm_orientation_controller::Controller::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:37</div></div>
-<div class="ttc" id="anamespacerm__orientation__controller_html"><div class="ttname"><a href="namespacerm__orientation__controller.html">rm_orientation_controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:16</div></div>
+<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_ad07d28f7a13dec1bae5079731d7da6a8"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">rm_orientation_controller::Controller::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:35</div></div>
+<div class="ttc" id="anamespacerm__orientation__controller_html"><div class="ttname"><a href="namespacerm__orientation__controller.html">rm_orientation_controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
