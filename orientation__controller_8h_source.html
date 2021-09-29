@@ -104,20 +104,19 @@ $(function() {
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  geometry_msgs::TransformStamped source2target_msg_;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  ros::Time last_br_;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::string frame_fixed_;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  std::string frame_source_;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  std::string frame_target_;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">double</span> last_orientation_x, last_orientation_y;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  std::shared_ptr&lt;realtime_tools::RealtimePublisher&lt;sensor_msgs::Imu&gt; &gt; imu_pub_;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};  <span class="comment">// namespace rm_orientation_controller</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SRC_RM_SOFTWARE_RM_CONTROLLERS_RM_ORIENTATION_CONTROLLERS_INCLUDE_ORIENTATION_CONTROLLER_H_</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  std::string frame_source_;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  std::string frame_target_;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">double</span> last_orientation_x, last_orientation_y;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  std::shared_ptr&lt;realtime_tools::RealtimePublisher&lt;sensor_msgs::Imu&gt; &gt; imu_pub_;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};  <span class="comment">// namespace rm_orientation_controller</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// SRC_RM_SOFTWARE_RM_CONTROLLERS_RM_ORIENTATION_CONTROLLERS_INCLUDE_ORIENTATION_CONTROLLER_H_</span></div>
 <div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html">rm_orientation_controller::Controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:20</div></div>
 <div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_a68dc5e6e5923e172df8bf6454c401211"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#a68dc5e6e5923e172df8bf6454c401211">rm_orientation_controller::Controller::init</a></div><div class="ttdeci">bool init(hardware_interface::RobotHW *robot_hw, ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:12</div></div>
 <div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_a791855bc01d8a21570923def3c67c1b7"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#a791855bc01d8a21570923def3c67c1b7">rm_orientation_controller::Controller::Controller</a></div><div class="ttdeci">Controller()=default</div></div>
-<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_ad07d28f7a13dec1bae5079731d7da6a8"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">rm_orientation_controller::Controller::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:35</div></div>
+<div class="ttc" id="aclassrm__orientation__controller_1_1_controller_html_ad07d28f7a13dec1bae5079731d7da6a8"><div class="ttname"><a href="classrm__orientation__controller_1_1_controller.html#ad07d28f7a13dec1bae5079731d7da6a8">rm_orientation_controller::Controller::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdef"><b>Definition:</b> orientation_controller.cpp:34</div></div>
 <div class="ttc" id="anamespacerm__orientation__controller_html"><div class="ttname"><a href="namespacerm__orientation__controller.html">rm_orientation_controller</a></div><div class="ttdef"><b>Definition:</b> orientation_controller.h:17</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
