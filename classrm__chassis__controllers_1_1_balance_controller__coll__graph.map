@@ -1,6 +1,5 @@
 <map id="rm_chassis_controllers::BalanceController" name="rm_chassis_controllers::BalanceController">
-<area shape="rect" id="node1" title=" " alt="" coords="609,60,765,101"/>
-<area shape="rect" id="node2" href="$classrm__chassis__controllers_1_1_chassis_base.html" title=" " alt="" coords="404,60,560,101"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,280,76"/>
-<area shape="rect" id="node4" href="$structrm__chassis__controllers_1_1_command.html" title=" " alt="" coords="65,100,221,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="525,27,681,69"/>
+<area shape="rect" id="node2" href="$classrm__chassis__controllers_1_1_chassis_base.html" title=" " alt="" coords="216,5,477,91"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,20,168,76"/>
 </map>

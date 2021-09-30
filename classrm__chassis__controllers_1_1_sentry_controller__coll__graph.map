@@ -1,6 +1,5 @@
 <map id="rm_chassis_controllers::SentryController" name="rm_chassis_controllers::SentryController">
-<area shape="rect" id="node1" title=" " alt="" coords="609,60,765,101"/>
-<area shape="rect" id="node2" href="$classrm__chassis__controllers_1_1_chassis_base.html" title=" " alt="" coords="404,60,560,101"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,5,280,76"/>
-<area shape="rect" id="node4" href="$structrm__chassis__controllers_1_1_command.html" title=" " alt="" coords="65,100,221,141"/>
+<area shape="rect" id="node1" title=" " alt="" coords="469,20,625,61"/>
+<area shape="rect" id="node2" href="$classrm__chassis__controllers_1_1_chassis_base.html" title=" " alt="" coords="216,5,421,76"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,13,168,69"/>
 </map>

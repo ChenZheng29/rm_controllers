@@ -109,14 +109,14 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="chassis__base_8h.html">rm_chassis_controllers/chassis_base.h</a>&quot;</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &lt;sensor_msgs/Imu.h&gt;</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;nav_msgs/Odometry.h&gt;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;Eigen/Dense&gt;</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#include &lt;rm_common/lqr.h&gt;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="namespacerm__chassis__controllers.html">   46</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerm__chassis__controllers.html">rm_chassis_controllers</a></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classrm__chassis__controllers_1_1_balance_controller.html">   48</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrm__chassis__controllers_1_1_balance_controller.html">BalanceController</a> : <span class="keyword">public</span> <a class="code" href="classrm__chassis__controllers_1_1_chassis_base.html">ChassisBase</a></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &lt;rm_common/lqr.h&gt;</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &lt;hardware_interface/imu_sensor_interface.h&gt;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacerm__chassis__controllers.html">   45</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacerm__chassis__controllers.html">rm_chassis_controllers</a></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classrm__chassis__controllers_1_1_balance_controller.html">   47</a></span>&#160;<span class="keyword">class </span><a class="code" href="classrm__chassis__controllers_1_1_balance_controller.html">BalanceController</a> : <span class="keyword">public</span> <a class="code" href="classrm__chassis__controllers_1_1_chassis_base.html">ChassisBase</a>&lt;rm_control::RobotStateInterface, hardware_interface::ImuSensorInterface,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                                             hardware_interface::EffortJointInterface&gt;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classrm__chassis__controllers_1_1_balance_controller.html#a69af9996f3c79065fef14a8287615081">   51</a></span>&#160;  <a class="code" href="classrm__chassis__controllers_1_1_balance_controller.html#a69af9996f3c79065fef14a8287615081">BalanceController</a>() = <span class="keywordflow">default</span>;</div>
@@ -127,35 +127,33 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordtype">void</span> getK(XmlRpc::XmlRpcValue a, XmlRpc::XmlRpcValue b, XmlRpc::XmlRpcValue q, XmlRpc::XmlRpcValue r);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> moveJoint(<span class="keyword">const</span> ros::Time&amp; time, <span class="keyword">const</span> ros::Duration&amp; period) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  geometry_msgs::Twist forwardKinematics() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> dataImuCallback(<span class="keyword">const</span> sensor_msgs::ImuConstPtr&amp; data);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  hardware_interface::JointHandle joint_left_, joint_right_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  hardware_interface::ImuSensorHandle imu_sensor_handle_;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  ros::Publisher state_real_pub_;</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  hardware_interface::JointHandle joint_left_, joint_right_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  ros::Subscriber data_imu_sub_;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  ros::Publisher state_real_pub_;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  realtime_tools::RealtimeBuffer&lt;sensor_msgs::Imu&gt; imu_rt_buffer_;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  sensor_msgs::Imu imu_data_;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="comment">// class member about full state feedback controller</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> STATE_DIM = 4;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTROL_DIM = 2;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, 1&gt; x_{}, x_ref_{};</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, 1&gt; u_{};</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, STATE_DIM&gt; k_{};</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, STATE_DIM&gt; a_{}, q_{};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, CONTROL_DIM&gt; b_{};</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, CONTROL_DIM&gt; r_{};</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">double</span> com_pitch_offset_{};</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;};</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}  <span class="comment">// namespace rm_chassis_controllers</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// Class member about full state feedback controller</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> STATE_DIM = 4;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> CONTROL_DIM = 2;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, 1&gt; x_{}, x_ref_{};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, 1&gt; u_{};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, STATE_DIM&gt; k_{};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, STATE_DIM&gt; a_{}, q_{};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  Eigen::Matrix&lt;double, STATE_DIM, CONTROL_DIM&gt; b_{};</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  Eigen::Matrix&lt;double, CONTROL_DIM, CONTROL_DIM&gt; r_{};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordtype">double</span> com_pitch_offset_{};</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}  <span class="comment">// namespace rm_chassis_controllers</span></div>
 <div class="ttc" id="achassis__base_8h_html"><div class="ttname"><a href="chassis__base_8h.html">chassis_base.h</a></div></div>
 <div class="ttc" id="aclassrm__chassis__controllers_1_1_balance_controller_html"><div class="ttname"><a href="classrm__chassis__controllers_1_1_balance_controller.html">rm_chassis_controllers::BalanceController</a></div><div class="ttdef"><b>Definition:</b> balance.h:49</div></div>
-<div class="ttc" id="aclassrm__chassis__controllers_1_1_balance_controller_html_a0588b95f0f5310dc0a050b8a3756aabf"><div class="ttname"><a href="classrm__chassis__controllers_1_1_balance_controller.html#a0588b95f0f5310dc0a050b8a3756aabf">rm_chassis_controllers::BalanceController::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdoc">Execute ChassisBase::update(). Set and publish necessary params.</div><div class="ttdef"><b>Definition:</b> balance.cpp:74</div></div>
+<div class="ttc" id="aclassrm__chassis__controllers_1_1_balance_controller_html_a0588b95f0f5310dc0a050b8a3756aabf"><div class="ttname"><a href="classrm__chassis__controllers_1_1_balance_controller.html#a0588b95f0f5310dc0a050b8a3756aabf">rm_chassis_controllers::BalanceController::update</a></div><div class="ttdeci">void update(const ros::Time &amp;time, const ros::Duration &amp;period) override</div><div class="ttdoc">Execute ChassisBase::update(). Set and publish necessary params.</div><div class="ttdef"><b>Definition:</b> balance.cpp:76</div></div>
 <div class="ttc" id="aclassrm__chassis__controllers_1_1_balance_controller_html_a57270f6e574701389ed1bcab9f1ee4bb"><div class="ttname"><a href="classrm__chassis__controllers_1_1_balance_controller.html#a57270f6e574701389ed1bcab9f1ee4bb">rm_chassis_controllers::BalanceController::init</a></div><div class="ttdeci">bool init(hardware_interface::RobotHW *robot_hw, ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) override</div><div class="ttdoc">Get necessary param. Init hardware interface. Creat publisher and subscriber.</div><div class="ttdef"><b>Definition:</b> balance.cpp:49</div></div>
 <div class="ttc" id="aclassrm__chassis__controllers_1_1_balance_controller_html_a69af9996f3c79065fef14a8287615081"><div class="ttname"><a href="classrm__chassis__controllers_1_1_balance_controller.html#a69af9996f3c79065fef14a8287615081">rm_chassis_controllers::BalanceController::BalanceController</a></div><div class="ttdeci">BalanceController()=default</div></div>
-<div class="ttc" id="aclassrm__chassis__controllers_1_1_chassis_base_html"><div class="ttname"><a href="classrm__chassis__controllers_1_1_chassis_base.html">rm_chassis_controllers::ChassisBase</a></div><div class="ttdef"><b>Definition:</b> chassis_base.h:62</div></div>
-<div class="ttc" id="anamespacerm__chassis__controllers_html"><div class="ttname"><a href="namespacerm__chassis__controllers.html">rm_chassis_controllers</a></div><div class="ttdef"><b>Definition:</b> balance.h:47</div></div>
+<div class="ttc" id="aclassrm__chassis__controllers_1_1_chassis_base_html"><div class="ttname"><a href="classrm__chassis__controllers_1_1_chassis_base.html">rm_chassis_controllers::ChassisBase</a></div><div class="ttdef"><b>Definition:</b> chassis_base.h:61</div></div>
+<div class="ttc" id="anamespacerm__chassis__controllers_html"><div class="ttname"><a href="namespacerm__chassis__controllers.html">rm_chassis_controllers</a></div><div class="ttdef"><b>Definition:</b> balance.h:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
