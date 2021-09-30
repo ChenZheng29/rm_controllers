@@ -155,22 +155,23 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">bool</span> use_tf_static_{};</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordtype">bool</span> ignore_timestamp_{};</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">double</span> publish_rate_{};</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ros::Time last_publish_time_;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  std::map&lt;std::string, hardware_interface::JointStateHandle&gt; jnt_states_;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::map&lt;std::string, SegmentPair&gt; segments_, segments_fixed_;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  tf2_ros::Buffer* tf_buffer_{};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  rm_common::TfRtBroadcaster tf_broadcaster_;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  rm_common::StaticTfRtBroadcaster static_tf_broadcaster_;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="comment">// Do not use tf2_ros::TransformListener because it will lead to setTransform calling twice when publishing the transform</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  ros::Subscriber tf_sub_;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  ros::Subscriber tf_static_sub_;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  realtime_tools::RealtimeBuffer&lt;tf2_msgs::TFMessage&gt; tf_msg_;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  realtime_tools::RealtimeBuffer&lt;tf2_msgs::TFMessage&gt; tf_static_msg_;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}  <span class="comment">// namespace robot_state_controller</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  ros::Time last_update_;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  ros::Time last_publish_time_;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  std::map&lt;std::string, hardware_interface::JointStateHandle&gt; jnt_states_;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  std::map&lt;std::string, SegmentPair&gt; segments_, segments_fixed_;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  tf2_ros::Buffer* tf_buffer_{};</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  rm_common::TfRtBroadcaster tf_broadcaster_;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  rm_common::StaticTfRtBroadcaster static_tf_broadcaster_;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// Do not use tf2_ros::TransformListener because it will lead to setTransform calling twice when publishing the transform</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  ros::Subscriber tf_sub_;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  ros::Subscriber tf_static_sub_;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  realtime_tools::RealtimeBuffer&lt;tf2_msgs::TFMessage&gt; tf_msg_;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  realtime_tools::RealtimeBuffer&lt;tf2_msgs::TFMessage&gt; tf_static_msg_;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}  <span class="comment">// namespace robot_state_controller</span></div>
 <div class="ttc" id="aclassrobot__state__controller_1_1_robot_state_controller_html"><div class="ttname"><a href="classrobot__state__controller_1_1_robot_state_controller.html">robot_state_controller::RobotStateController</a></div><div class="ttdef"><b>Definition:</b> robot_state_controller.h:70</div></div>
 <div class="ttc" id="aclassrobot__state__controller_1_1_robot_state_controller_html_ab3761a3caaa2da765e301ce534978e9b"><div class="ttname"><a href="classrobot__state__controller_1_1_robot_state_controller.html#ab3761a3caaa2da765e301ce534978e9b">robot_state_controller::RobotStateController::RobotStateController</a></div><div class="ttdeci">RobotStateController()=default</div></div>
 <div class="ttc" id="aclassrobot__state__controller_1_1_robot_state_controller_html_ac3372ca2f458e02926f0ead20eeec572"><div class="ttname"><a href="classrobot__state__controller_1_1_robot_state_controller.html#ac3372ca2f458e02926f0ead20eeec572">robot_state_controller::RobotStateController::init</a></div><div class="ttdeci">bool init(hardware_interface::RobotHW *robot_hw, ros::NodeHandle &amp;root_nh, ros::NodeHandle &amp;controller_nh) override</div><div class="ttdef"><b>Definition:</b> robot_state_controller.cpp:44</div></div>
